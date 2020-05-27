@@ -1,22 +1,20 @@
 module.exports = {
 	"root": true,
 	"env": {
-		// Using 2017 since 2019 isn't accepted. I suppose that's
-		// because no globals have been added to 2019 w.r.t 2017.
-		"es2017": true,
+		"es2020": true,
 		"node": true
 	},
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		/// Core parser options
-		"ecmaVersion": 2019,
+		"ecmaVersion": 2020,
 		// For a module, place a .eslintrc.js in src with contents
 		// 'module.exports = { "parserOptions": { "sourceType": "module" } };'
 		// to override this option.
 		"sourceType": "script",
 		/// Options for @typescript-eslint/parser
-		"tsconfigRootDir": __dirname,
-		"project": "./tsconfig.json"
+		"tsconfigRootDir": `__dirname/..`,
+		"project": "tsconfig.json"
 	},
 	"plugins": [
 		"@typescript-eslint/eslint-plugin",
